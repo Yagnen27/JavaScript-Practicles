@@ -1,1 +1,4 @@
-# JavaScript-Practicles
+# JavaScript
+Some Basic Programs 
+
+JavaScript Practicles
