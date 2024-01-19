@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Square root</title>
+</head>
+
+<body>
+
+    <input type="number" id="input1">
+    <input type="number" id="input2">
+    <input type="number" id="input3">
+    <input type="number" id="input4">
+    <input type="number" id="input5">
+    <button onclick="Show()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function Show() {
+            var a = parseInt(document.getElementById("input1").value);
+            var b = parseInt(document.getElementById("input2").value);
+            var c = parseInt(document.getElementById("input3").value);
+            var d = parseInt(document.getElementById("input4").value);
+            var e = parseInt(document.getElementById("input5").value);
+
+            var validValues = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+
+            if (!validValues.includes(a) || !validValues.includes(b) || !validValues.includes(c) || !validValues.includes(d) || !validValues.includes(e)) {
+                alert("Please Enter Valid Value");
+            } else {
+                var a1 = Math.sqrt(a);
+                var b1 = Math.sqrt(b);
+                var c1 = Math.sqrt(c);
+                var d1 = Math.sqrt(d);
+                var e1 = Math.sqrt(e);
+
+                document.getElementById("output").innerHTML = "Square roots: <br>" + a1 + "<br>" + b1 + "<br>" + c1 + "<br>"  + d1 + "<br>" + e1;
+            }
+        }
+    </script>
+</body>
+
+</html>

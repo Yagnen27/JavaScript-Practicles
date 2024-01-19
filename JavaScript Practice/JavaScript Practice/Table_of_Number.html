@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+
+<body>
+
+    <input type="number" id="inputnum">
+    <button id="btn" onclick="show()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+        function show() {
+            var userInput = document.getElementById('inputnum').value;
+            var output = document.getElementById('output');
+            output.innerHTML = "";
+
+
+            var parsedUserInput = parseInt(userInput);
+
+
+
+            if (userInput.includes('.') || isNaN(parsedUserInput)) {
+                alert("Please Enter Value in Integer");
+                window.location.reload();
+            } else if (parsedUserInput < 1) {
+                alert("Please Enter Value Greater Than 0 ");
+                window.location.reload();
+            }
+
+            for (let i = 1; i <= 10; i++) {
+                var result = parsedUserInput * i;
+                output.innerHTML += parsedUserInput + " x " + i + " = " + result + "<br>";
+            }
+        }
+    </script>
+</body>
+
+</html>

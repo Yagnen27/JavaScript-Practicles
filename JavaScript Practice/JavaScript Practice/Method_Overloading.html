@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overloading</title>
+</head>
+<body>
+    <script>
+        
+        function greeting(name) {
+                if (arguments.length === 0) {
+                    console.log("Jay Shree Ram");
+                } else {
+                    console.log("Jay" + name + "Ram");
+                }
+            }
+
+            greeting();            // Output: Jay Shree Ram
+            greeting("Shree");     // Output: JayShreeRam
+
+    
+            
+    // Method Overriding
+                class RamMandir {
+                    speak() {
+                        return "Jay ";
+                    }
+                }
+
+                class Mandir extends RamMandir {
+                    speak() {
+                        return super.speak() + "Shree Ram";
+                    }
+                }
+
+                const abc = new Mandir();
+
+                console.log(abc.speak());
+
+
+    </script>
+</body>
+</html>
