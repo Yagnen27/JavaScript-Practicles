@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting Data Using Hash</title>
+</head>
+<body>
+
+    <div align="center">
+    <img src="https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&w=400">
+    </div>
+
+    <div class="center" align="center">
+   
+     <label for="fname">First Name : </label><br>
+     <input type="text" id="fname" name="fname"><br>
+     
+        <label for="lname">Lats Name : </label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+            <label for="age">Age : </label><br>
+            <input type="number" id="age" name="age"><br>
+
+            <label for="mailid">Email : </label><br>
+            <input type="text" id="mailid" name="mailid"><br> 
+
+            <button style="background-color: red;" onclick="submit()">Submit</button>
+            </div>
+
+
+            <script>
+
+                abcArray = [];
+
+                function submit() {
+
+                    let firstName = document.getElementById("fname").value;
+                    let lastName = document.getElementById("lname").value;
+                    let userAge = document.getElementById("age").value;
+                    let userMail = document.getElementById("mailid").value;
+
+                    if (!userMail === '@') {
+                        alert("Please Enter Valid Email.")
+                        window.location.reload();
+                    }
+
+                    let hash = {
+                        FirstName : firstName,
+                        LastName: lastName,
+                        UserAge: userAge,
+                        UserMail: userMail
+                    } 
+
+                    abcArray.push(hash);
+                    
+                    console.log(abcArray);
+
+                }
+            </script>
+
+</body>
+</html>

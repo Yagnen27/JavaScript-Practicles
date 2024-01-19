@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+
+<body>
+     
+    <label for="inputtext" style="font-weight: 900; font-size: 25px;">Enter Your Today's Task Here</label><br>
+    <textarea id="inputtext" name="inputtext" style="height: 100px; width: 500px; resize: none;"></textarea><br>
+
+    <button style="background-color: red; padding: 1px; height: 30px; width: 100px;" onclick="submit()">Submit</button>
+
+    <h1>To Do List</h1>
+    <p id="currentdate"></p>
+
+    <p id="outputtext" style="border: 1px solid black;"></p>
+
+    <script>
+        function submit() {
+
+            var inputTxt = document.getElementById("inputtext").value;
+            const outputTxt = document.getElementById("outputtext");
+            outputTxt.textContent = inputTxt;
+
+            let currentDate = document.getElementById("currentdate");
+            const dt = new Date().toLocaleDateString('en-GB');
+            currentDate.textContent = dt;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
